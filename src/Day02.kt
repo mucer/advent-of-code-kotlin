@@ -9,13 +9,13 @@ fun main() {
     games
         .filter { game -> game.draws.all { it.red <= max.red && it.green <= max.green && it.blue <= max.blue } }
         .map(Game::id)
-        .reduce { a, b -> a + b }
+        .sum()
         .println()
 
     // part 2
     games
         .map { calcPower(it.draws) }
-        .reduce { a, b -> a + b }
+        .sum()
         .println()
 }
 

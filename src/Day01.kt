@@ -5,7 +5,7 @@ fun main() {
     fun part1(input: List<String>): Int = input
             .map { "${it.find(Char::isDigit)}${it.findLast(Char::isDigit)}" }
             .map(String::toInt)
-            .reduce { a, b -> a + b }
+            .sum()
 
     fun getNumber(text: String, last: Boolean): Int {
         val find =
@@ -18,7 +18,7 @@ fun main() {
     fun part2(input: List<String>): Int = input
             .map { "${getNumber(it, false)}${getNumber(it, true)}" }
             .map(String::toInt)
-            .reduce { a, b -> a + b }
+            .sum()
 
     // test if impl
     val input = readInput("Day01")
