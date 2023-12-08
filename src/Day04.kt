@@ -16,7 +16,6 @@ fun main() {
         .println()
 }
 
-val SPACES = Regex("\\s+")
 fun readCard(line: String): Card {
     val (idStr, numberStr) = line.split(":")
     val id = idStr.substring(5).trim().toInt()
