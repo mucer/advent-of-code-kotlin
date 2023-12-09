@@ -2,11 +2,6 @@ import java.lang.RuntimeException
 
 fun Pair<String, String>.lr(i: Char) = if (i == 'L') first else second
 
-fun List<Long>.lcm(): Long = reduce { a, b -> lcm(a, b) }
-
-fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
-
-fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
 
 val NETWORK = Regex("(\\w+) = \\((\\w+), (\\w+)\\)")
 
