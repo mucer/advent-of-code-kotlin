@@ -31,3 +31,5 @@ fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
  */
 fun Any?.println() = println(this)
 val SPACES = Regex("\\s+")
+const val ANSI_RESET = "\u001B[0m"
+const val ANSI_GREEN_BACKGROUND = "\u001B[42m"
